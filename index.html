@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical two-part learning module on the EVAL framework — built for product managers who need to make smarter AI architecture decisions.">
+  <title>Evaluating AI Systems for Product Managers | EVAL Framework</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans (headings/UI) + Source Sans 3 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<!-- ============================================================
+  TODO: Replace the Storyline URL below before publishing.
+  Change: data-storyline-url="https://REPLACE_WITH_YOUR_STORYLINE_URL"
+  To:     data-storyline-url="https://your-actual-url.com/your-module/story.html"
+  This single change updates ALL launch buttons on the page automatically.
+  ============================================================ -->
+<body data-storyline-url="https://REPLACE_WITH_YOUR_STORYLINE_URL">
+
+  <!-- ============================================================
+    NAVIGATION
+  ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="container nav-inner">
+      <span class="nav-brand">Evaluating AI Systems</span>
+      <nav class="site-nav" aria-label="Course navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="#overview" class="nav-link">Overview</a></li>
+          <li><a href="#why" class="nav-link">Why It Matters</a></li>
+          <li><a href="#objectives" class="nav-link">Objectives</a></li>
+          <li><a href="#eval-framework" class="nav-link">EVAL Framework</a></li>
+          <li><a href="#start-module" class="nav-link nav-link--cta">Start Module</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+      SECTION 1: HERO
+    ============================================================ -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__badge">AI Product Management</div>
+        <h1 class="hero__title" id="hero-title">
+          Evaluating AI Systems<br>for Product Managers
+        </h1>
+        <p class="hero__subtitle">
+          A practical two-part learning module on the EVAL framework — built for product managers
+          who need to make smarter AI architecture decisions.
+        </p>
+        <div class="hero__ctas">
+          <a href="#start-module" class="btn btn-primary" aria-label="Watch video overview — scrolls to video section">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Video Overview
+          </a>
+          <a href="https://REPLACE_WITH_YOUR_STORYLINE_URL"
+             class="btn btn-secondary"
+             data-storyline-target
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Launch interactive simulation — opens in a new tab">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Launch Interactive Simulation
+          </a>
+        </div>
+        <div class="hero__meta" aria-label="Course details">
+          <span class="meta-pill">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ~30 min total
+          </span>
+          <span class="meta-pill">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Best on desktop
+          </span>
+          <span class="meta-pill">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Scenario-based
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      SECTION 2: COURSE OVERVIEW
+    ============================================================ -->
+    <section id="overview" class="section bg-white" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Course Overview</span>
+          <h2 class="section-title" id="overview-title">What This Course Is About</h2>
+        </div>
+        <div class="overview-grid">
+          <div class="overview-text">
+            <p>
+              AI product managers often need to make decisions about how an AI system should work and what to do when it falls short. Those decisions can affect product quality, user experience, cost, and business sustainability. Without a structured approach, it is easy to rely on intuition instead of evidence.
+            </p>
+            <p>
+              This module introduces two connected ideas: the core AI architecture approaches—RAG, Fine-Tuning, and Agentic Workflows—and the <strong>EVAL framework</strong>, a five-stage process for evaluating system performance, identifying root causes, and making more informed product decisions.
+            </p>
+            <p>
+             By the end of the module, you will understand the key trade-offs behind common AI architecture choices and apply the EVAL framework in a realistic scenario to make a data-informed decision with confidence.
+            </p>
+          </div>
+          <div class="overview-stats" aria-label="Course at a glance">
+            <div class="stat-item">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Learning Modules</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">EVAL Framework Stages</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Learning Objectives</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Realistic Scenario</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      SECTION 3: WHY THIS COURSE MATTERS
+    ============================================================ -->
+    <section id="why" class="section bg-gray" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Why It Matters</span>
+          <h2 class="section-title" id="why-title">AI Product Decisions Are Rarely Simple</h2>
+          <p class="section-intro">
+            Every AI architecture decision involves trade-offs across four competing pressures.
+            Getting any one wrong can sink a product — or a budget.
+          </p>
+        </div>
+        <div class="grid-2" role="list">
+          <article class="card pillar-card" role="listitem">
+            <div class="pillar-icon pillar-icon--quality" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="pillar-title">Quality</h3>
+            <p class="pillar-desc">
+              Does the AI system produce outputs that are accurate, relevant, and trustworthy
+              enough for your users to rely on? Quality failures erode user trust fast.
+            </p>
+          </article>
+          <article class="card pillar-card" role="listitem">
+            <div class="pillar-icon pillar-icon--speed" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 13 9 20 9"/><path d="M3 12a9 9 0 1 0 16-5.62L13 2H3v10"/></svg>
+            </div>
+            <h3 class="pillar-title">Speed</h3>
+            <p class="pillar-desc">
+              How quickly can you ship a working solution? Slower, more capable systems may be
+              overtaken by fast competitors with good-enough AI.
+            </p>
+          </article>
+          <article class="card pillar-card" role="listitem">
+            <div class="pillar-icon pillar-icon--cost" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="pillar-title">Cost</h3>
+            <p class="pillar-desc">
+              What is the true total cost of this system — including inference, maintenance, and
+              the hidden cost of switching architectures later? AITCO helps you see the full picture.
+            </p>
+          </article>
+          <article class="card pillar-card" role="listitem">
+            <div class="pillar-icon pillar-icon--sustainability" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="pillar-title">Business Sustainability</h3>
+            <p class="pillar-desc">
+              Can the business sustain this AI investment over time? A solution that works today
+              but is too expensive or brittle to scale is not a solution — it's a liability.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      SECTION 4: LEARNING OBJECTIVES
+    ============================================================ -->
+    <section id="objectives" class="section bg-white" aria-labelledby="objectives-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Learning Objectives</span>
+          <h2 class="section-title" id="objectives-title">What You Will Be Able to Do</h2>
+          <p class="section-intro">
+            By completing both parts of this module, you will be able to:
+          </p>
+        </div>
+        <ol class="objectives-list" role="list">
+          <li class="card objective-card" role="listitem">
+            <span class="objective-number" aria-hidden="true">01</span>
+            <div class="objective-content">
+              <h3 class="objective-title">Distinguish AI Architecture Options</h3>
+              <p class="objective-desc">
+                Distinguish among RAG, Fine-Tuning, and Agentic Workflows — and know when to use
+                each based on the nature of the problem and the business context.
+              </p>
+            </div>
+          </li>
+          <li class="card objective-card" role="listitem">
+            <span class="objective-number" aria-hidden="true">02</span>
+            <div class="objective-content">
+              <h3 class="objective-title">Apply the EVAL Framework</h3>
+              <p class="objective-desc">
+                Use the EVAL framework to systematically evaluate the performance of an AI system
+                across all five stages: Setup, Audit, Diagnose, Decide, and Optimize.
+              </p>
+            </div>
+          </li>
+          <li class="card objective-card" role="listitem">
+            <span class="objective-number" aria-hidden="true">03</span>
+            <div class="objective-content">
+              <h3 class="objective-title">Diagnose Root Causes</h3>
+              <p class="objective-desc">
+                Identify the root cause of AI system failures using structured diagnostic methods —
+                moving beyond surface-level symptoms to understand what is actually breaking and why.
+              </p>
+            </div>
+          </li>
+          <li class="card objective-card" role="listitem">
+            <span class="objective-number" aria-hidden="true">04</span>
+            <div class="objective-content">
+              <h3 class="objective-title">Compare Solutions Using Quality and Cost Metrics</h3>
+              <p class="objective-desc">
+                Evaluate competing solution options using both quality metrics and cost metrics,
+                including AITCO (AI Total Cost of Ownership), to make defensible architectural decisions.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      SECTION 5: HOW THE COURSE WORKS
+    ============================================================ -->
+    <section id="how-it-works" class="section bg-gray" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title" id="how-title">A Two-Part Learning Experience</h2>
+          <p class="section-intro">
+            This module combines direct instruction with applied practice. Each part builds on
+            the last.
+          </p>
+        </div>
+        <div class="parts-grid">
+          <article class="card part-card">
+            <div class="part-number" aria-hidden="true">Part 1</div>
+            <div class="part-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            </div>
+            <h3 class="part-title">Video Foundations</h3>
+            <p class="part-desc">
+              A short video that introduces the three core AI architecture approaches, RAG, 
+              Fine-Tuning, and Agentic Workflows, and explains how the EVAL framework helps 
+              AI product managers make evidence-based decisions about quality, speed, and cost 
+              before they begin the interactive scenario.
+            </p>
+            <ul class="part-details" aria-label="Part 1 details">
+              <li>Introduces RAG, Fine-Tuning, and Agentic Workflows and the trade-offs behind each approach</li>
+              <li>Walks through the 5 stages of the EVAL framework</li>
+            </ul>
+          </article>
+          <article class="card part-card">
+            <div class="part-number part-number--secondary" aria-hidden="true">Part 2</div>
+            <div class="part-icon part-icon--secondary" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="part-title">Interactive Scenario</h3>
+            <p class="part-desc">
+              An Articulate Storyline simulation that places you in the role of an AI product 
+              manager responding to an AI tutor performance crisis. Apply the EVAL framework 
+              step by step to define success, diagnose the root cause, compare architecture 
+              options, and evaluate whether the final solution is sustainable.
+            </p>
+            <ul class="part-details" aria-label="Part 2 details">
+              <li>Branching scenario with realistic decision points</li>
+              <li>Immediate feedback on your choices and reasoning</li>
+              <li>Applies the full EVAL process in a realistic product context</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      SECTION 6: EVAL FRAMEWORK PREVIEW
+    ============================================================ -->
+    <section id="eval-framework" class="section bg-indigo-light" aria-labelledby="eval-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Framework Preview</span>
+          <h2 class="section-title" id="eval-title">The EVAL Framework</h2>
+          <p class="section-intro">
+            Five structured stages that guide you from identifying a problem to making an evidence-based decision.
+          </p>
+        </div>
+        <div class="eval-steps" role="list" aria-label="EVAL framework stages">
+          <div class="eval-step" role="listitem">
+            <div class="eval-step__circle" aria-hidden="true">
+              <span class="eval-step__num">S</span>
+            </div>
+            <h3 class="eval-step__title">Setup</h3>
+            <p class="eval-step__desc">Define success with a rubric and test dataset.</p>
+          </div>
+          <div class="eval-step" role="listitem">
+            <div class="eval-step__circle" aria-hidden="true">
+              <span class="eval-step__num">A</span>
+            </div>
+            <h3 class="eval-step__title">Audit</h3>
+            <p class="eval-step__desc">Verify that the judge is scoring outputs accurately.</p>
+          </div>
+          <div class="eval-step" role="listitem">
+            <div class="eval-step__circle eval-step__circle--accent" aria-hidden="true">
+              <span class="eval-step__num">D</span>
+            </div>
+            <h3 class="eval-step__title">Diagnose</h3>
+            <p class="eval-step__desc">Find the real cause of failure, not just the obvious symptom.</p>
+          </div>
+          <div class="eval-step" role="listitem">
+            <div class="eval-step__circle" aria-hidden="true">
+              <span class="eval-step__num">D</span>
+            </div>
+            <h3 class="eval-step__title">Decide</h3>
+            <p class="eval-step__desc">Choose the best solution by balancing quality, speed, and cost.</p>
+          </div>
+          <div class="eval-step" role="listitem">
+            <div class="eval-step__circle" aria-hidden="true">
+              <span class="eval-step__num">O</span>
+            </div>
+            <h3 class="eval-step__title">Optimize</h3>
+            <p class="eval-step__desc">Improve the solution's cost structure and test whether it is sustainable in production.</p>
+          </div>
+        </div>
+        <p class="eval-footnote">
+          The full framework is introduced in the video and applied step by step in the interactive simulation.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      SECTION 7: START THE MODULE
+      TODO: Place your video file at assets/video/intro.mp4
+            See assets/video/README.txt for specifications.
+    ============================================================ -->
+    <section id="start-module" class="section bg-white" aria-labelledby="start-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Start the Module</span>
+          <h2 class="section-title" id="start-title">Begin Here: Video Overview</h2>
+          <p class="section-intro">
+            Watch the video introduction first, then launch the interactive simulation below.
+          </p>
+        </div>
+
+        <!-- Video Player -->
+        <div class="video-wrapper">
+          <!--
+            TODO: Place your video file at assets/video/intro.mp4
+            See assets/video/README.txt for file specifications.
+            Alternatively, replace this <video> block with an <iframe>
+            embed from YouTube or Vimeo.
+          -->
+          <video
+            class="course-video"
+            controls
+            preload="metadata"
+            aria-label="Course introduction video: Evaluating AI Systems for Product Managers">
+            <source src="assets/video/intro.mp4" type="video/mp4">
+            <!-- Fallback message if browser cannot play the video -->
+            <p>
+              Your browser does not support HTML5 video.
+              <a href="assets/video/intro.mp4" download>Download the video</a> to watch it locally.
+            </p>
+          </video>
+          <p class="video-caption">
+            Part 1 of 2 &mdash; Video introduction produced with Synthesia.
+          </p>
+        </div>
+
+        <!-- Simulation CTA -->
+        <div class="sim-cta-block">
+          <div class="sim-cta-text">
+            <h3 class="sim-cta-heading">Ready to apply what you learned?</h3>
+            <p class="sim-cta-desc">
+              Launch the interactive simulation to work through a realistic AI product scenario
+              using the EVAL framework. The simulation opens in a new tab.
+            </p>
+          </div>
+          <a href="https://REPLACE_WITH_YOUR_STORYLINE_URL"
+             class="btn btn-primary btn-lg"
+             data-storyline-target
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Launch interactive simulation — opens in a new tab">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Launch Interactive Simulation
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- ============================================================
+    FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-text">
+        Evaluating AI Systems for Product Managers &mdash; An instructional design portfolio project.
+      </p>
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span>. Built with Synthesia, Articulate Storyline 360, and GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
