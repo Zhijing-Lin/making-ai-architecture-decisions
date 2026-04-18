@@ -1,0 +1,405 @@
+WEBVTT
+
+cue-1
+00:00:00.680 --> 00:00:04.840
+Hi, and welcome to this video about
+choosing the right AI architecture.
+
+cue-2
+00:00:07.120 --> 00:00:12.060
+As an AI product manager, selecting the
+right architecture is a critical step in
+
+cue-3
+00:00:12.060 --> 00:00:16.020
+building an AI application. You will often
+need to choose between three main
+
+cue-4
+00:00:16.020 --> 00:00:16.590
+approaches:
+
+cue-5
+00:00:17.220 --> 00:00:18.900
+retrieval-augmented generation,
+
+cue-6
+00:00:19.580 --> 00:00:20.130
+fine-tuning,
+
+cue-7
+00:00:20.780 --> 00:00:24.740
+and agentic workflows. This decision
+matters because it directly affects
+
+cue-8
+00:00:24.740 --> 00:00:29.640
+development cost, system latency, and the
+overall user experience. Since every
+
+cue-9
+00:00:29.640 --> 00:00:33.440
+product has different constraints, your
+goal is to evaluate these trade-offs and
+
+cue-10
+00:00:33.440 --> 00:00:37.020
+choose the approach that best aligns with
+your needs. Choosing the wrong
+
+cue-11
+00:00:37.020 --> 00:00:40.960
+architecture can lead to high costs or a
+system that fails to meet user
+
+cue-12
+00:00:40.960 --> 00:00:41.860
+expectations.
+
+cue-13
+00:00:43.940 --> 00:00:47.320
+At a high level, the difference between
+these approaches comes down to three
+
+cue-14
+00:00:47.320 --> 00:00:51.900
+things: where knowledge comes from, how
+reasoning happens, and how much control
+
+cue-15
+00:00:51.900 --> 00:00:53.560
+you have over the system's behavior.
+
+cue-16
+00:00:54.260 --> 00:00:55.960
+A simple way to remember them is this:
+
+cue-17
+00:00:56.640 --> 00:01:01.520
+RAG looks it up, fine-tuning memorizes it,
+and agentic workflows think through it.
+
+cue-18
+00:01:03.740 --> 00:01:06.860
+Let's start with retrieval-augmented
+generation, or RAG.
+
+cue-19
+00:01:07.720 --> 00:01:12.920
+With RAG, the model retrieves information
+from an external source, such as documents
+
+cue-20
+00:01:12.920 --> 00:01:17.640
+or a knowledge base, and then uses that
+information to generate a response. You
+
+cue-21
+00:01:17.640 --> 00:01:20.400
+can think of it as search combined with AI
+explanation.
+
+cue-22
+00:01:21.060 --> 00:01:23.670
+RAG is often attractive because it is
+faster to build,
+
+cue-23
+00:01:24.340 --> 00:01:29.300
+easier to update, and lower cost than
+other approaches. If your content changes
+
+cue-24
+00:01:29.300 --> 00:01:33.700
+frequently, you can update the knowledge
+source without retraining the model. This
+
+cue-25
+00:01:33.700 --> 00:01:37.780
+makes RAG a strong fit for systems that
+rely on up-to-date or domain-specific
+
+cue-26
+00:01:37.780 --> 00:01:38.420
+information.
+
+cue-27
+00:01:40.600 --> 00:01:42.620
+However, RAG also has limitations.
+
+cue-28
+00:01:43.400 --> 00:01:47.500
+Its performance depends heavily on the
+quality of retrieval. If the wrong
+
+cue-29
+00:01:47.500 --> 00:01:52.039
+information is retrieved or if the task
+requires deeper reasoning, the response
+
+cue-30
+00:01:52.040 --> 00:01:54.000
+may be shallow or inconsistent.
+
+cue-31
+00:01:54.680 --> 00:01:59.180
+As a result, RAG works best for FAQ
+systems, knowledge-based chatbots, or
+
+cue-32
+00:01:59.180 --> 00:02:02.000
+assistants that primarily reference
+external content.
+
+cue-33
+00:02:04.200 --> 00:02:05.120
+Next is fine-tuning.
+
+cue-34
+00:02:05.780 --> 00:02:10.359
+Fine-tuning improves the model itself by
+training it on a specific data set.
+
+cue-35
+00:02:10.360 --> 00:02:14.240
+Instead of retrieving information each
+time, the model learns patterns directly
+
+cue-36
+00:02:14.240 --> 00:02:18.180
+from examples. In simple terms,
+fine-tuning teaches the model how to
+
+cue-37
+00:02:18.180 --> 00:02:18.600
+respond.
+
+cue-38
+00:02:19.230 --> 00:02:22.980
+This approach is useful when you need
+consistent tone, stronger domain
+
+cue-39
+00:02:22.980 --> 00:02:28.040
+expertise, or tighter control over
+outputs. For example, if you want an AI
+
+cue-40
+00:02:28.080 --> 00:02:31.980
+tutor to consistently follow a specific
+teaching style, fine-tuning may be more
+
+cue-41
+00:02:31.980 --> 00:02:33.480
+effective than RAG alone.
+
+cue-42
+00:02:35.440 --> 00:02:40.560
+However, fine-tuning requires high-quality
+label data, more development effort, and
+
+cue-43
+00:02:40.560 --> 00:02:45.400
+higher upfront cost. It is also less
+flexible when requirements change.
+
+cue-44
+00:02:45.400 --> 00:02:50.220
+Fine-tuning is best suited for specialized
+products, branded assistants, or systems
+
+cue-45
+00:02:50.220 --> 00:02:51.840
+that require consistent behavior.
+
+cue-46
+00:02:54.120 --> 00:02:58.800
+Finally, there are agentic workflows. With
+agentic workflows, the system breaks
+
+cue-47
+00:02:58.800 --> 00:03:04.420
+tasks into multiple steps. It can plan,
+use tools, evaluate intermediate results,
+
+cue-48
+00:03:04.420 --> 00:03:08.080
+revise its output, and then produce a
+final answer.
+
+cue-49
+00:03:08.120 --> 00:03:12.520
+Instead of responding all at once, it
+works through a structured process. This
+
+cue-50
+00:03:12.520 --> 00:03:17.310
+makes agentic workflows especially
+powerful for complex multi-step tasks that
+
+cue-51
+00:03:17.310 --> 00:03:21.740
+require deeper reasoning and greater
+control. For example, in a tutoring
+
+cue-52
+00:03:21.740 --> 00:03:25.640
+system, an agent can guide a student step
+by step rather than jumping straight to
+
+cue-53
+00:03:25.640 --> 00:03:26.120
+the answer.
+
+cue-54
+00:03:26.800 --> 00:03:31.400
+The trade-off is that agentic workflows
+are slower, more complex to build, and
+
+cue-55
+00:03:31.400 --> 00:03:32.380
+more expensive to run.
+
+cue-56
+00:03:34.600 --> 00:03:35.460
+So how do you decide?
+
+cue-57
+00:03:36.100 --> 00:03:40.120
+In practice, there is no single best
+approach. In many cases, you may even
+
+cue-58
+00:03:40.120 --> 00:03:44.820
+combine methods. For example, you might
+use fine-tuning to control tone while
+
+cue-59
+00:03:44.820 --> 00:03:48.840
+using RAG to provide up-to-date
+information or use an agentic workflow to
+
+cue-60
+00:03:48.840 --> 00:03:52.760
+manage more complex reasoning on top of
+retrieval. Understanding how these
+
+cue-61
+00:03:52.760 --> 00:03:56.359
+approaches can work together allows you to
+build more flexible and effective
+
+cue-62
+00:03:56.360 --> 00:04:01.840
+systems. But even with these options,
+making the right decision can be
+
+cue-63
+00:04:01.840 --> 00:04:06.880
+challenging. When you're balancing cost,
+speed, and quality, it's easy to rely on
+
+cue-64
+00:04:06.880 --> 00:04:09.049
+intuition or incomplete information.
+
+cue-65
+00:04:09.940 --> 00:04:12.990
+To make this process more systematic, we
+use the EVAL framework.
+
+cue-66
+00:04:13.840 --> 00:04:18.060
+The EVAL framework provides a structured
+way to evaluate these trade-offs and make
+
+cue-67
+00:04:18.060 --> 00:04:22.320
+decisions based on data instead of
+intuition. There are five stages in the
+
+cue-68
+00:04:22.320 --> 00:04:23.100
+EVAL framework.
+
+cue-69
+00:04:25.240 --> 00:04:26.160
+Stage one, setup,
+
+cue-70
+00:04:26.840 --> 00:04:30.660
+is where you define what success looks
+like by creating a clear rubric for the
+
+cue-71
+00:04:30.660 --> 00:04:35.220
+LLM judge and a test data set for the AI
+system, so the system's outputs can be
+
+cue-72
+00:04:35.220 --> 00:04:38.170
+evaluated by the LLM consistently and
+automatically.
+
+cue-73
+00:04:40.420 --> 00:04:45.020
+Stage two, audit, is where human
+evaluators review and verify the LLM's
+
+cue-74
+00:04:45.020 --> 00:04:49.160
+judgments to make sure the evaluation is
+accurate and aligned with your goals.
+
+cue-75
+00:04:51.360 --> 00:04:56.000
+Stage three, diagnose, is where you
+analyze the evaluation results from LLM
+
+cue-76
+00:04:56.000 --> 00:05:00.600
+Judge based on the rubric and data set to
+identify the root cause of the system's
+
+cue-77
+00:05:00.600 --> 00:05:03.640
+failures rather than just observing
+surface-level issues.
+
+cue-78
+00:05:05.820 --> 00:05:10.800
+Stage four, decide, is where you select
+the best solution based on your diagnosis
+
+cue-79
+00:05:10.800 --> 00:05:14.200
+while balancing important trade-offs like
+quality, speed, and cost.
+
+cue-80
+00:05:16.380 --> 00:05:21.000
+Stage five, optimize, is where you make
+the solution workable at scale by
+
+cue-81
+00:05:21.000 --> 00:05:24.500
+improving its cost structure and
+evaluating whether it is sustainable in
+
+cue-82
+00:05:24.500 --> 00:05:25.010
+production.
+
+cue-83
+00:05:26.630 --> 00:05:30.980
+Together, these five stages guide you
+through a complete structured process for
+
+cue-84
+00:05:30.980 --> 00:05:33.910
+improving AI systems using data instead of
+guesswork.
+
+cue-85
+00:05:34.580 --> 00:05:35.290
+Now, let's begin.
