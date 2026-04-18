@@ -388,47 +388,53 @@
     </div>
 
         <!-- Video Player -->
-        <div class="video-wrapper">
-          <!--
-            TODO: Place your video file at assets/video/intro.mp4
-            See assets/video/README.txt for file specifications.
-            Alternatively, replace this <video> block with an <iframe>
-            embed from YouTube or Vimeo.
-          -->
-          <video
-            class="course-video"
-            controls
-            preload="metadata"
-            aria-label="Course introduction video: Evaluating AI Systems for Product Managers">
-            <source src="assets/video/intro.mp4" type="video/mp4">
-            <!-- Fallback message if browser cannot play the video -->
-            <p>
-              Your browser does not support HTML5 video.
-              <a href="assets/video/intro.mp4" download>Download the video</a> to watch it locally.
-            </p>
-          </video>
-        </div>
+       <!-- Video Player -->
+<div class="video-wrapper">
+  <!--
+    TODO: Place your video file at assets/video/intro.mp4
+    See assets/video/README.txt for file specifications.
+    Alternatively, replace this <video> block with an <iframe>
+    embed from YouTube or Vimeo.
+  -->
+  <video
+    class="course-video"
+    controls
+    preload="metadata"
+    aria-label="Course introduction video: Making AI Architecture Decisions for Product Managers">
+    <source src="assets/video/intro.mp4" type="video/mp4">
+    <track
+      src="assets/video/intro.vtt"
+      kind="subtitles"
+      srclang="en"
+      label="English"
+      default>
+    <!-- Fallback message if browser cannot play the video -->
+    <p>
+      Your browser does not support HTML5 video.
+      <a href="assets/video/intro.mp4" download>Download the video</a> to watch it locally.
+    </p>
+  </video>
+</div>
 
-        <!-- Simulation CTA -->
-        <div class="sim-cta-block">
-          <div class="sim-cta-text">
-            <h3 class="sim-cta-heading">Ready to apply what you learned?</h3>
-            <p class="sim-cta-desc">
-              Launch the interactive simulation to work through a realistic AI product scenario
-              using the EVAL framework. The simulation opens in a new tab.
-            </p>
-          </div>
-          <a href="https://REPLACE_WITH_YOUR_STORYLINE_URL"
-             class="btn btn-primary btn-lg"
-             data-storyline-target
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Launch interactive simulation — opens in a new tab">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Launch Interactive Simulation
-          </a>
-        </div>
-      </div>
+<!-- Simulation CTA -->
+<div class="sim-cta-block">
+  <div class="sim-cta-text">
+    <h3 class="sim-cta-heading">Ready to apply what you learned?</h3>
+    <p class="sim-cta-desc">
+      Launch the interactive simulation to work through a realistic AI product scenario
+      using the EVAL framework. The simulation opens in a new tab.
+    </p>
+  </div>
+  <a href="https://zhijing-lin.github.io/AI-PM-3/"
+     class="btn btn-primary btn-lg"
+     data-storyline-target
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Launch interactive simulation — opens in a new tab">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    Launch Interactive Simulation
+  </a>
+</div>
     </section>
 
 
