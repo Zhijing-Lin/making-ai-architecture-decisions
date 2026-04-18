@@ -449,38 +449,93 @@ p + p { margin-top: var(--space-4); }
 .overview-highlights {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
+  gap: 8px;
+  position: relative;
+  isolation: isolate; /* scope internal z-indices */
+}
+
+/* Central dot at the intersection of all four cards */
+.overview-highlights::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .highlight-item {
+  position: relative;
   background-color: var(--color-bg-white);
   border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-primary);
   border-radius: var(--radius-md);
   padding: var(--space-4) var(--space-4);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: var(--space-3);
-  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: box-shadow var(--transition-fast);
 }
 
 .highlight-item:hover {
   box-shadow: var(--shadow-card);
-  border-left-color: var(--color-secondary);
+}
+
+/* Stacking order: earlier cards paint above later ones so their
+   connector knobs appear over adjacent card borders */
+.highlight-item:nth-child(1) { z-index: 4; }
+.highlight-item:nth-child(2) { z-index: 3; }
+.highlight-item:nth-child(3) { z-index: 2; }
+.highlight-item:nth-child(4) { z-index: 1; }
+
+/* Puzzle knob: right edge of cards 1 and 3 (straddling horizontal gap) */
+.highlight-item:nth-child(1)::after,
+.highlight-item:nth-child(3)::after {
+  content: '';
+  position: absolute;
+  right: -12px; /* centers 16px circle in 8px gap */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-bg-white);
+}
+
+/* Puzzle knob: bottom edge of cards 1 and 2 (straddling vertical gap) */
+.highlight-item:nth-child(1)::before,
+.highlight-item:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  bottom: -12px; /* centers 16px circle in 8px gap */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-bg-white);
 }
 
 .highlight-icon {
   flex-shrink: 0;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   background-color: var(--color-primary-light);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-primary);
-  margin-top: 1px;
 }
 
 .highlight-body {
@@ -928,7 +983,7 @@ p + p { margin-top: var(--space-4); }
   }
 
   .overview-highlights {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .eval-step__desc {
